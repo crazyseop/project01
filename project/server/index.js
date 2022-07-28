@@ -7,12 +7,12 @@ const db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "eptest00",
-  database: "userlist",
+  database: "user_list",
 });
 
 app.get("/", (req, res) => {
   const sqlInsert =
-    "INSERT INTO user (userID, userPassword) VALUES ('aaa', 'bbb');";
+    "INSERT INTO user VALUES ('addaa', 'bddbb');";
   db.query(sqlInsert, (err, result) => {
     res.send("Hello World!");
   });
