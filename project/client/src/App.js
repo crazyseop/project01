@@ -8,15 +8,16 @@ import Axios from "axios";
 
 function App() {
   useEffect(() => {
-    Axios.get('http://localhost:3001/api/get').then((response) => {
+    Axios.get("/api/get").then((response) => {
       console.log(response.data);
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <div className="App">
       <Head></Head>
       <Intro></Intro>
+      <div>hello</div>
     </div>
   );
 }

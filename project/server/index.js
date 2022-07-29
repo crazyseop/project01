@@ -18,7 +18,7 @@ const db = mysql.createConnection({
 //  });
 //});
 app.get("/api/get", (req, res) => {
-  const sqlInsert = "SELECT * FROM user;"
+  const sqlInsert = "SELECT * FROM user;";
   db.query(sqlInsert, (err, result) => {
     res.send(result);
   });
