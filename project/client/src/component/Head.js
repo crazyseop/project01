@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// Head : This woll be used in the main App.js
+// Head : This will be used in the main App.js
 
 class Head extends Component {
   render() {

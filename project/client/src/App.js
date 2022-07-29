@@ -1,18 +1,24 @@
-import React, { Component } from "react";
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
 
 import Head from "./component/Head";
 import Intro from "./component/Intro";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Head></Head>
-        <Intro></Intro>
-      </div>
-    );
-  }
+import Axios from "axios";
+
+function App() {
+  useEffect(() => {
+    Axios.get('http://localhost:3001/api/get').then((response) => {
+      console.log(response.data);
+    })
+  }, [])
+
+  return (
+    <div className="App">
+      <Head></Head>
+      <Intro></Intro>
+    </div>
+  );
 }
 
 export default App;

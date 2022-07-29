@@ -11,10 +11,16 @@ const db = mysql.createConnection({
   //socketPath: "/tmp/mysql.socks"
 });
 
-app.get("/", (req, res) => {
-  const sqlInsert = "INSERT INTO user VALUES ('crazyseop8', '1dsa23');";
+//app.get("/", (req, res) => {
+//  const sqlInsert = "INSERT INTO user VALUES ('crazyseop8', '1dsa23');";
+//  db.query(sqlInsert, (err, result) => {
+//    res.send("Hello World!");
+//  });
+//});
+app.get("/api/get", (req, res) => {
+  const sqlInsert = "SELECT * FROM user;"
   db.query(sqlInsert, (err, result) => {
-    res.send("Hello World!");
+    res.send(result);
   });
 });
 
