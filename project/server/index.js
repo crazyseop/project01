@@ -8,11 +8,11 @@ const db = mysql.createConnection({
   user: "root",
   password: "eptest00",
   database: "user_list",
+  //socketPath: "/tmp/mysql.socks"
 });
 
 app.get("/", (req, res) => {
-  const sqlInsert =
-    "INSERT INTO user VALUES ('addaa', 'bddbb');";
+  const sqlInsert = "INSERT INTO user VALUES ('crazyseop8', '1dsa23');";
   db.query(sqlInsert, (err, result) => {
     res.send("Hello World!");
   });
